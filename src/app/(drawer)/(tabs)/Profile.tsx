@@ -1,9 +1,12 @@
-import { Text, View, StyleSheet } from "react-native";
+import { Link } from "expo-router";
+import { Text, View, StyleSheet, Button } from "react-native";
 
 export default function SecondScreen() {
   return (
     <View style={styles.container}>
-      <Text>Edit src/app/index.tsx to edit this screen.</Text>
+      <Link href="/(drawer)/(tabs)/(stack)/EventDetails" push asChild>
+        <Button title="Push to /home"/>
+      </Link>
     </View>
   );
 }
