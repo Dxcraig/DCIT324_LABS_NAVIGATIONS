@@ -1,14 +1,12 @@
 import { Link } from 'expo-router'
-import { Button, StyleSheet, View } from 'react-native'
+import { Button, StyleSheet, View, Text } from 'react-native'
 
 export default function Welcome() {
   return (
     <View style={styles.container}>
-      <Link href='/EditProfile' push asChild>
-        <Button title='Edit Profile'/>
-      </Link>
-      <Link href='/(drawer)/About' push asChild>
-        <Button title='Main'/>
+      <Text style={styles.appName}>Campus Navigator</Text>
+      <Link href='/Feed' push asChild>
+        <Button title='Get Started'/>
       </Link>
     </View>
   )
@@ -20,5 +18,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     gap: 15
+  },
+  appName: {
+    fontSize: 24,
+    fontWeight: "bold",
   },
 })

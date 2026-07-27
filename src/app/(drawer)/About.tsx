@@ -1,9 +1,14 @@
 import { Text, View, StyleSheet } from "react-native";
 
-export default function Index() {
+export default function About() {
   return (
     <View style={styles.container}>
-      <Text>Edit src/app/index.tsx to edit this screen.</Text>
+      <Text style={styles.appName}>Campus Navigator</Text>
+      <Text style={styles.description}>
+        A simple app for navigating campus announcements, courses, and events.
+      </Text>
+      <Text>Stephen Edem Kwame Doe-Lawson</Text>
+      <Text>22045257</Text>
     </View>
   );
 }
@@ -13,5 +18,14 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
+    gap: 8,
+    padding: 20,
+  },
+  appName: {
+    fontSize: 22,
+    fontWeight: "bold",
+  },
+  description: {
+    textAlign: "center",
   },
 });
